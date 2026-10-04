@@ -8,6 +8,7 @@ public class App {
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
+        System.out.println("2 - Even"); // Добавили пункт меню
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -16,6 +17,9 @@ public class App {
         switch (choice) {
             case 1:
                 Cli.welcomeUser();
+                break;
+            case 2:
+                Even.play();
                 break;
             case 0:
                 break;
