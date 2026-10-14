@@ -9,6 +9,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even"); // Добавили пункт меню
+        System.out.println("3 - Calc"); // Добавил в меню калькулятор
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -20,6 +21,9 @@ public class App {
                 break;
             case 2:
                 Even.play();
+                break;
+            case 3:
+                Calc.play(); // Вызов калькулятора
                 break;
             case 0:
                 break;
