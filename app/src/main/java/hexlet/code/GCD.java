@@ -37,6 +37,7 @@ public class GCD {
                 System.out.println("Correct!");
                 correctAnswers = correctAnswers + 1;
             } else {
+                // Если ответ неверный, выводим ошибку и полностью выходим из метода
                 System.out.println(
                         "'"
                                 + userAnswer
