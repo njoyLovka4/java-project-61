@@ -46,11 +46,12 @@ public class Calc {
 
             String correctAnswer = String.valueOf(result);
 
-            // Проверка ответа
+            // Проверка ответа пользователя
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct!");
                 correctAnswers = correctAnswers + 1;
             } else {
+                // Если ответ неверный, выводим ошибку и полностью выходим из метода
                 System.out.println(
                         "'"
                                 + userAnswer
@@ -58,7 +59,7 @@ public class Calc {
                                 + correctAnswer
                                 + "'.");
                 System.out.println("Let's try again, " + username + "!");
-                return; // Выходим из метода, завершая игру
+                return; // Завершает работу метода play() при ошибке
             }
         }
 

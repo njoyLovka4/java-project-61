@@ -17,12 +17,14 @@ public class Even {
 
         // Счетчик правильных ответов
         int correctAnswers = 0;
+        final int maxCorrectAnswers = 3;
 
         // Цикл продолжается, пока игрок не ответит правильно 3 раза
-        while (correctAnswers < 3) {
+        while (correctAnswers < maxCorrectAnswers) {
             // Генерация числа от 1 до 100
             int number = (int) (Math.random() * 100) + 1;
 
+            // Вывод вопроса пользователю
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
@@ -48,11 +50,11 @@ public class Even {
                                 + correctAnswer
                                 + "'.");
                 System.out.println("Let's try again, " + username + "!");
-                return; // Завершает работу метода play()
+                return; // Завершает работу метода play() при ошибке
             }
         }
 
-        // Если игрок успешно прошел 3 раунда
+        // Поздравление при успешном прохождении 3 раундов
         System.out.println("Congratulations, " + username + "!");
     }
 }
