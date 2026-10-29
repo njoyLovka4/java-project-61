@@ -13,7 +13,7 @@ public class Even {
         System.out.println("Hello, " + username + "!");
 
         // Правила игры
-        System.out.println("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         // Счетчик правильных ответов
         int correctAnswers = 0;
