@@ -12,6 +12,7 @@ public class App {
         System.out.println("3 - Calc"); // Добавил в меню калькулятор
         System.out.println("4 - GCD"); // Добавили новый пукнт игры: GCD
         System.out.println("5 - Progression"); // Добавил в меню Арифметическая прогрессию
+        System.out.println("6 - PrimeNumber"); // Добавил в меню пункт: Простое число
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -31,6 +32,8 @@ public class App {
                 GCD.play(); // Добавили вызов новой игры
             case 5:
                 Progression.play(); // Добавил вызов игры Прогрессия
+            case 6:
+                PrimeNumber.play(); // Добавил игру: Просто число.
             case 0:
                 break;
             default:
