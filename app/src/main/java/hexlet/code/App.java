@@ -30,10 +30,13 @@ public class App {
                 break;
             case 4:
                 GCD.play(); // Добавили вызов новой игры
+                break;
             case 5:
                 Progression.play(); // Добавил вызов игры Прогрессия
+                break;
             case 6:
                 PrimeNumber.play(); // Добавил игру: Просто число.
+                break;
             case 0:
                 break;
             default:
