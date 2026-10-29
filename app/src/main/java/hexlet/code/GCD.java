@@ -9,7 +9,7 @@ public class GCD {
         // Приветствие и знакомство
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String username = scanner.next();
+        String username = scanner.nextLine();
         System.out.println("Hello, " + username + "!");
 
         // Правила игры
@@ -18,6 +18,7 @@ public class GCD {
         int correctAnswers = 0;
         final int maxCorrectAnswers = 3;
 
+        // Цикл продолжается, пока игрок не ответит правильно 3 раза
         while (correctAnswers < maxCorrectAnswers) {
             // Генерация двух случайных чисел от 1 до 100
             int num1 = (int) (Math.random() * 100) + 1;

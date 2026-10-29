@@ -9,7 +9,7 @@ public class Even {
         // Приветствие и знакомство
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String username = scanner.next();
+        String username = scanner.nextLine();
         System.out.println("Hello, " + username + "!");
 
         // Правила игры

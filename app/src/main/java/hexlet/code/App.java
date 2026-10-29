@@ -11,6 +11,7 @@ public class App {
         System.out.println("2 - Even"); // Добавили пункт меню
         System.out.println("3 - Calc"); // Добавил в меню калькулятор
         System.out.println("4 - GCD"); // Добавили новый пукнт игры: GCD
+        System.out.println("5 - Progression"); // Добавил в меню Арифметическая прогрессию
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -28,6 +29,8 @@ public class App {
                 break;
             case 4:
                 GCD.play(); // Добавили вызов новой игры
+            case 5:
+                Progression.play(); // Добавил вызов игры Прогрессия
             case 0:
                 break;
             default:
