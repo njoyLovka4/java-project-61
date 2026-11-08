@@ -1,9 +1,14 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
 import java.util.Scanner;
 
-public class Even {
-    public static void play() {
+public class Engine {
+    public static final int MAX_ROUNDS = 3;
+    public static String currentQuestion = "";
+    public static String currentAnswer = "";
+
+    public static void play(String description, String gameName) {
         Scanner scanner = new Scanner(System.in);
 
         // Приветствие и знакомство
@@ -13,32 +18,35 @@ public class Even {
         System.out.println("Hello, " + username + "!");
 
         // Правила игры
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        System.out.println(description);
 
         // Счетчик правильных ответов
         int correctAnswers = 0;
         final int maxCorrectAnswers = 3;
 
         // Цикл продолжается, пока игрок не ответит правильно 3 раза
-        while (correctAnswers < maxCorrectAnswers) {
-            // Генерация числа от 1 до 100
-            int number = (int) (Math.random() * 100) + 1;
+        for (int i = 0; i < MAX_ROUNDS; i++) {
+
+            // Запрашиваем генерацию раунда у нужной игры
+            if (gameName.equals("Even")) {
+                Even.generateRound();
+            } else if (gameName.equals("Calc")) {
+                Calc.generateRound();
+            } else if (gameName.equals("GCD")) {
+                GCD.generateRound();
+            } else if (gameName.equals("Progression")) {
+                Progression.generateRound();
+            } else if (gameName.equals("PrimeNumber")) {
+                PrimeNumber.generateRound();
+            }
 
             // Вывод вопроса пользователю
-            System.out.println("Question: " + number);
+            System.out.println("Question: " + currentQuestion);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
 
-            // Определяем правильный ответ текстом (создается заново на каждой итерации)
-            String correctAnswer = "";
-            if (number % 2 == 0) {
-                correctAnswer = "yes"; // Используем =, а не +=
-            } else {
-                correctAnswer = "no"; // Используем =, а не +=
-            }
-
             // Проверка ответа пользователя
-            if (userAnswer.equals(correctAnswer)) {
+            if (userAnswer.equals(currentAnswer)) {
                 System.out.println("Correct!");
                 correctAnswers = correctAnswers + 1; // Увеличиваем счетчик
             } else {
@@ -47,7 +55,7 @@ public class Even {
                         "'"
                                 + userAnswer
                                 + "' is wrong answer ;(. Correct answer was '"
-                                + correctAnswer
+                                + currentAnswer
                                 + "'.");
                 System.out.println("Let's try again, " + username + "!");
                 return; // Завершает работу метода play() при ошибке
